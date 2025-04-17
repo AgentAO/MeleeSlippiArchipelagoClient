@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://c77uhbfbjpqx4"]
+
+[ext_resource type="Script" path="res://Main.cs" id="1_wk8tl"]
+[ext_resource type="PackedScene" uid="uid://lirby80l2xvy" path="res://intro.tscn" id="2_2bb2x"]
+[ext_resource type="PackedScene" uid="uid://d2aepi78fek6f" path="res://game.tscn" id="3_glwvg"]
+[ext_resource type="Texture2D" uid="uid://blfahl8rxvr5c" path="res://art/bg/image1.png" id="4_37ni2"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_1us7r"]
+script/source = "using Godot;
+using System;
+
+public partial class AnimatedTextureRect : Godot.TextureRect
+{
+	[Export]
+	public SpriteFrames sprites { get; set; }
+	
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
+
+[node name="Main" type="Node"]
+script = ExtResource("1_wk8tl")
+IntroScene = ExtResource("2_2bb2x")
+GameScene = ExtResource("3_glwvg")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Background" type="TextureRect" parent="HUD"]
+offset_left = -8.0
+offset_top = 6.0
+offset_right = 1912.0
+offset_bottom = 1086.0
+texture = ExtResource("4_37ni2")
+script = SubResource("CSharpScript_1us7r")
+
+[node name="Intro" parent="HUD" instance=ExtResource("2_2bb2x")]
+
+[node name="Game" parent="HUD" instance=ExtResource("3_glwvg")]
+visible = false

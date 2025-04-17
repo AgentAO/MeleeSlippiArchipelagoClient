@@ -1,0 +1,926 @@
+[gd_scene load_steps=87 format=3 uid="uid://d2aepi78fek6f"]
+
+[ext_resource type="Theme" uid="uid://bgm77cbt8fsxx" path="res://button-theme.tres" id="1_b45wl"]
+[ext_resource type="Script" path="res://Game.cs" id="1_mxhx8"]
+[ext_resource type="Texture2D" uid="uid://ba3pxwq7jejs7" path="res://art/sprites.png" id="2_r6sv7"]
+[ext_resource type="Texture2D" uid="uid://hcrvkbg8ym4i" path="res://art/locked.png" id="3_1i704"]
+[ext_resource type="Texture2D" uid="uid://c47cnbkv7ci8b" path="res://art/shiek.png" id="4_24t3j"]
+[ext_resource type="Texture2D" uid="uid://36cgmvkosq7h" path="res://art/notification-holder.png" id="5_e2oum"]
+[ext_resource type="Script" path="res://RandomButton.cs" id="5_miwjy"]
+[ext_resource type="Script" path="res://DRMARIO.cs" id="5_o16ue"]
+[ext_resource type="Script" path="res://MARIO.cs" id="6_qcqba"]
+[ext_resource type="Script" path="res://SAMUS.cs" id="6_s83k6"]
+[ext_resource type="Script" path="res://LUIGI.cs" id="7_8jt0n"]
+[ext_resource type="Script" path="res://BOWSER.cs" id="8_p3nyi"]
+[ext_resource type="Script" path="res://PEACH.cs" id="9_e5l6e"]
+[ext_resource type="Script" path="res://YOSHI.cs" id="10_v2hb2"]
+[ext_resource type="Script" path="res://YLINK.cs" id="11_0cqw0"]
+[ext_resource type="Script" path="res://DK.cs" id="12_eo7rb"]
+[ext_resource type="Script" path="res://CF.cs" id="13_ddnui"]
+[ext_resource type="Script" path="res://GANONDORF.cs" id="14_syc5v"]
+[ext_resource type="Script" path="res://FALCO.cs" id="15_0ehmn"]
+[ext_resource type="Script" path="res://FOX.cs" id="16_xlbi0"]
+[ext_resource type="Script" path="res://NESS.cs" id="17_ii4iu"]
+[ext_resource type="Script" path="res://IC.cs" id="18_lrlsu"]
+[ext_resource type="Script" path="res://KIRBY.cs" id="19_4vm60"]
+[ext_resource type="Script" path="res://ZELDA.cs" id="21_6q32t"]
+[ext_resource type="Script" path="res://LINK.cs" id="22_esv7e"]
+[ext_resource type="Script" path="res://PICHU.cs" id="23_q5war"]
+[ext_resource type="Script" path="res://PIKACHU.cs" id="24_m5suu"]
+[ext_resource type="Script" path="res://JIGGLYPUFF.cs" id="25_ic4al"]
+[ext_resource type="Script" path="res://MEWTWO.cs" id="26_igu37"]
+[ext_resource type="Script" path="res://GW.cs" id="27_6yx16"]
+[ext_resource type="Script" path="res://SHEIK.cs" id="29_22mq7"]
+[ext_resource type="Script" path="res://MARTH.cs" id="30_vq435"]
+[ext_resource type="Script" path="res://ROY.cs" id="31_ecmq8"]
+[ext_resource type="FontFile" uid="uid://c1jpejhs21ypp" path="res://fonts/5a2ee6a29f0d16380e5575184f65a280.otf" id="34_67bbs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5gwr"]
+atlas = ExtResource("2_r6sv7")
+region = Rect2(1, 1, 64, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp3x1"]
+atlas = ExtResource("2_r6sv7")
+region = Rect2(66, 1, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gsagq"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_worqj"]
+atlas = SubResource("CompressedTexture2D_gsagq")
+region = Rect2(131, 1, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uiwom"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awel1"]
+atlas = SubResource("CompressedTexture2D_uiwom")
+region = Rect2(196, 1, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5j0vs"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21ojw"]
+atlas = SubResource("CompressedTexture2D_5j0vs")
+region = Rect2(261, 1, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p48lc"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnnju"]
+atlas = SubResource("CompressedTexture2D_p48lc")
+region = Rect2(326, 1, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3tmhh"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ptwxi"]
+atlas = SubResource("CompressedTexture2D_3tmhh")
+region = Rect2(521, 58, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yasha"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_io8t3"]
+atlas = SubResource("CompressedTexture2D_yasha")
+region = Rect2(391, 1, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qh55r"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5oph"]
+atlas = SubResource("CompressedTexture2D_qh55r")
+region = Rect2(456, 1, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qpdcs"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4roee"]
+atlas = SubResource("CompressedTexture2D_qpdcs")
+region = Rect2(521, 1, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8uapv"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pihn0"]
+atlas = SubResource("CompressedTexture2D_8uapv")
+region = Rect2(1, 58, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fo1v5"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc710"]
+atlas = SubResource("CompressedTexture2D_fo1v5")
+region = Rect2(66, 58, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0jrki"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4avo5"]
+atlas = SubResource("CompressedTexture2D_0jrki")
+region = Rect2(131, 58, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1jh6i"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhnyk"]
+atlas = SubResource("CompressedTexture2D_1jh6i")
+region = Rect2(196, 58, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o77yh"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_diubf"]
+atlas = SubResource("CompressedTexture2D_o77yh")
+region = Rect2(261, 58, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_64cah"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy10c"]
+atlas = SubResource("CompressedTexture2D_64cah")
+region = Rect2(326, 58, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bfnqp"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urt4k"]
+atlas = SubResource("CompressedTexture2D_bfnqp")
+region = Rect2(391, 58, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_em8lw"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dj6a4"]
+atlas = SubResource("CompressedTexture2D_em8lw")
+region = Rect2(456, 58, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_111mw"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cu3n"]
+atlas = SubResource("CompressedTexture2D_111mw")
+region = Rect2(66, 115, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_edopd"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rvla"]
+atlas = SubResource("CompressedTexture2D_edopd")
+region = Rect2(131, 115, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ooov0"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5u1q"]
+atlas = SubResource("CompressedTexture2D_ooov0")
+region = Rect2(196, 115, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wfxsy"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6hnq"]
+atlas = SubResource("CompressedTexture2D_wfxsy")
+region = Rect2(261, 115, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fgsjk"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fasi"]
+atlas = SubResource("CompressedTexture2D_fgsjk")
+region = Rect2(326, 115, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wehj1"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6sj42"]
+atlas = SubResource("CompressedTexture2D_wehj1")
+region = Rect2(391, 115, 64, 56)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x142p"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_besbf"]
+atlas = SubResource("CompressedTexture2D_x142p")
+region = Rect2(456, 115, 64, 56)
+
+[sub_resource type="InputEventAction" id="InputEventAction_p3vlu"]
+action = &"RollRandomCharacter"
+
+[sub_resource type="Shortcut" id="Shortcut_vmogg"]
+events = [SubResource("InputEventAction_p3vlu")]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2c3pr"]
+load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khw3x"]
+atlas = SubResource("CompressedTexture2D_2c3pr")
+region = Rect2(391, 172, 64, 56)
+
+[node name="Game" type="CanvasLayer" groups=["GameStartHandler"]]
+script = ExtResource("1_mxhx8")
+
+[node name="DRMARIO" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 36.0
+offset_top = 48.0
+offset_right = 188.0
+offset_bottom = 181.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_q5gwr")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("5_o16ue")
+CharacterName = "Dr. Mario"
+metadata/_edit_use_anchors_ = true
+
+[node name="Counter" type="Label" parent="DRMARIO"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="MARIO" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 208.0
+offset_top = 40.0
+offset_right = 360.0
+offset_bottom = 173.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_fp3x1")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("6_qcqba")
+CharacterName = "Mario"
+
+[node name="Counter" type="Label" parent="MARIO"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="LUIGI" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 383.0
+offset_top = 43.0
+offset_right = 535.0
+offset_bottom = 176.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_worqj")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("7_8jt0n")
+CharacterName = "Luigi"
+
+[node name="Counter" type="Label" parent="LUIGI"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="BOWSER" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 557.0
+offset_top = 43.0
+offset_right = 709.0
+offset_bottom = 176.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_awel1")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("8_p3nyi")
+CharacterName = "Bowser"
+
+[node name="Counter" type="Label" parent="BOWSER"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="PEACH" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 731.0
+offset_top = 40.0
+offset_right = 883.0
+offset_bottom = 173.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_21ojw")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("9_e5l6e")
+CharacterName = "Peach"
+
+[node name="Counter" type="Label" parent="PEACH"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="YOSHI" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 907.0
+offset_top = 38.0
+offset_right = 1059.0
+offset_bottom = 171.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_jnnju")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("10_v2hb2")
+CharacterName = "Yoshi"
+
+[node name="Counter" type="Label" parent="YOSHI"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="YLINK" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 1413.0
+offset_top = 203.0
+offset_right = 1565.0
+offset_bottom = 336.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_ptwxi")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("11_0cqw0")
+CharacterName = "Young Link"
+
+[node name="Counter" type="Label" parent="YLINK"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="DK" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 1079.0
+offset_top = 39.0
+offset_right = 1231.0
+offset_bottom = 172.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_io8t3")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("12_eo7rb")
+CharacterName = "Donkey Kong"
+
+[node name="Counter" type="Label" parent="DK"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="CF" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 1247.0
+offset_top = 38.0
+offset_right = 1399.0
+offset_bottom = 171.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_g5oph")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("13_ddnui")
+CharacterName = "Captain Falcon"
+
+[node name="Counter" type="Label" parent="CF"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="GANONDORF" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 1413.0
+offset_top = 49.0
+offset_right = 1565.0
+offset_bottom = 182.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_4roee")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("14_syc5v")
+CharacterName = "Ganondorf"
+
+[node name="Counter" type="Label" parent="GANONDORF"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="FALCO" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 36.0
+offset_top = 202.0
+offset_right = 188.0
+offset_bottom = 335.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_pihn0")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("15_0ehmn")
+CharacterName = "Falco"
+
+[node name="Counter" type="Label" parent="FALCO"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="FOX" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 208.0
+offset_top = 194.0
+offset_right = 360.0
+offset_bottom = 327.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_bc710")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("16_xlbi0")
+CharacterName = "Fox"
+
+[node name="Counter" type="Label" parent="FOX"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="NESS" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 383.0
+offset_top = 197.0
+offset_right = 535.0
+offset_bottom = 330.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_4avo5")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("17_ii4iu")
+CharacterName = "Ness"
+
+[node name="Counter" type="Label" parent="NESS"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="IC" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 557.0
+offset_top = 197.0
+offset_right = 709.0
+offset_bottom = 330.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_fhnyk")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("18_lrlsu")
+CharacterName = "Ice Climbers"
+
+[node name="Counter" type="Label" parent="IC"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="KIRBY" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 731.0
+offset_top = 194.0
+offset_right = 883.0
+offset_bottom = 327.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_diubf")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("19_4vm60")
+CharacterName = "Kirby"
+
+[node name="Counter" type="Label" parent="KIRBY"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="SAMUS" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 907.0
+offset_top = 192.0
+offset_right = 1059.0
+offset_bottom = 325.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_oy10c")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("6_s83k6")
+CharacterName = "Samus"
+
+[node name="Counter" type="Label" parent="SAMUS"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="ZELDA" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 1079.0
+offset_top = 193.0
+offset_right = 1231.0
+offset_bottom = 326.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_urt4k")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("21_6q32t")
+CharacterName = "Zelda"
+
+[node name="Counter" type="Label" parent="ZELDA"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="LINK" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 1247.0
+offset_top = 192.0
+offset_right = 1399.0
+offset_bottom = 325.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_dj6a4")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("22_esv7e")
+CharacterName = "Link"
+
+[node name="Counter" type="Label" parent="LINK"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="PICHU" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 118.0
+offset_top = 350.0
+offset_right = 270.0
+offset_bottom = 483.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_5cu3n")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("23_q5war")
+CharacterName = "Pichu"
+
+[node name="Counter" type="Label" parent="PICHU"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="PIKACHU" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 290.0
+offset_top = 343.0
+offset_right = 442.0
+offset_bottom = 476.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_0rvla")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("24_m5suu")
+CharacterName = "Pikachu"
+
+[node name="Counter" type="Label" parent="PIKACHU"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="JIGGLYPUFF" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 462.0
+offset_top = 343.0
+offset_right = 614.0
+offset_bottom = 476.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_k5u1q")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("25_ic4al")
+CharacterName = "Jigglypuff"
+
+[node name="Counter" type="Label" parent="JIGGLYPUFF"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="MEWTWO" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 642.0
+offset_top = 341.0
+offset_right = 794.0
+offset_bottom = 474.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_j6hnq")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("26_igu37")
+CharacterName = "Mewtwo"
+
+[node name="Counter" type="Label" parent="MEWTWO"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="GW" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 825.0
+offset_top = 341.0
+offset_right = 977.0
+offset_bottom = 474.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_3fasi")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("27_6yx16")
+CharacterName = "Mr. Game & Watch"
+
+[node name="Counter" type="Label" parent="GW"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="SHEIK" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 995.0
+offset_top = 341.0
+offset_right = 1147.0
+offset_bottom = 476.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = ExtResource("4_24t3j")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("29_22mq7")
+CharacterName = "Sheik"
+
+[node name="Counter" type="Label" parent="SHEIK"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="MARTH" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 1161.0
+offset_top = 342.0
+offset_right = 1313.0
+offset_bottom = 475.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_6sj42")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("30_vq435")
+CharacterName = "Marth"
+
+[node name="Counter" type="Label" parent="MARTH"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="ROY" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
+offset_left = 1329.0
+offset_top = 350.0
+offset_right = 1481.0
+offset_bottom = 483.0
+theme = ExtResource("1_b45wl")
+disabled = true
+texture_normal = SubResource("AtlasTexture_besbf")
+texture_disabled = ExtResource("3_1i704")
+stretch_mode = 0
+script = ExtResource("31_ecmq8")
+CharacterName = "Roy"
+
+[node name="Counter" type="Label" parent="ROY"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+horizontal_alignment = 2
+
+[node name="RandomButton" type="TextureButton" parent="."]
+offset_left = 118.0
+offset_top = 645.0
+offset_right = 270.0
+offset_bottom = 778.0
+shortcut = SubResource("Shortcut_vmogg")
+texture_normal = SubResource("AtlasTexture_khw3x")
+stretch_mode = 0
+script = ExtResource("5_miwjy")
+
+[node name="RandomCharacterSelection" type="Label" parent="."]
+offset_left = 299.0
+offset_top = 657.0
+offset_right = 944.0
+offset_bottom = 765.0
+theme_override_font_sizes/font_size = 72
+
+[node name="Message Holder" type="TextureRect" parent="."]
+offset_left = 1188.0
+offset_top = 561.0
+offset_right = 1773.0
+offset_bottom = 999.0
+texture = ExtResource("5_e2oum")
+expand_mode = 1
+
+[node name="Message Label" type="Label" parent="Message Holder"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.068
+anchor_top = 0.355
+anchor_right = 0.068
+anchor_bottom = 0.355
+offset_left = -13.78
+offset_top = 2.51001
+offset_right = 517.22
+offset_bottom = 156.51
+theme_override_fonts/font = ExtResource("34_67bbs")
+theme_override_font_sizes/font_size = 28
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextEdit" type="TextEdit" parent="Message Holder"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 368.0
+offset_right = 520.0
+offset_bottom = 415.0
+theme_override_fonts/font = ExtResource("34_67bbs")
+wrap_mode = 1
+
+[connection signal="pressed" from="DRMARIO" to="DRMARIO" method="OnPressed"]
+[connection signal="pressed" from="MARIO" to="MARIO" method="OnPressed"]
+[connection signal="pressed" from="LUIGI" to="LUIGI" method="OnPressed"]
+[connection signal="pressed" from="BOWSER" to="BOWSER" method="OnPressed"]
+[connection signal="pressed" from="PEACH" to="PEACH" method="OnPressed"]
+[connection signal="pressed" from="YOSHI" to="YOSHI" method="OnPressed"]
+[connection signal="pressed" from="YLINK" to="YLINK" method="OnPressed"]
+[connection signal="pressed" from="DK" to="DK" method="OnPressed"]
+[connection signal="pressed" from="CF" to="CF" method="OnPressed"]
+[connection signal="pressed" from="GANONDORF" to="GANONDORF" method="OnPressed"]
+[connection signal="pressed" from="FALCO" to="FALCO" method="OnPressed"]
+[connection signal="pressed" from="FOX" to="FOX" method="OnPressed"]
+[connection signal="pressed" from="NESS" to="NESS" method="_on_pressed"]
+[connection signal="pressed" from="NESS" to="NESS" method="OnPressed"]
+[connection signal="pressed" from="IC" to="IC" method="OnPressed"]
+[connection signal="pressed" from="KIRBY" to="KIRBY" method="OnPressed"]
+[connection signal="pressed" from="SAMUS" to="SAMUS" method="OnPressed"]
+[connection signal="pressed" from="ZELDA" to="ZELDA" method="OnPressed"]
+[connection signal="pressed" from="LINK" to="LINK" method="OnPressed"]
+[connection signal="pressed" from="PICHU" to="PICHU" method="OnPressed"]
+[connection signal="pressed" from="PIKACHU" to="PIKACHU" method="_on_pressed"]
+[connection signal="pressed" from="PIKACHU" to="PIKACHU" method="OnPressed"]
+[connection signal="pressed" from="JIGGLYPUFF" to="JIGGLYPUFF" method="OnPressed"]
+[connection signal="pressed" from="MEWTWO" to="MEWTWO" method="OnPressed"]
+[connection signal="pressed" from="GW" to="GW" method="OnPressed"]
+[connection signal="pressed" from="SHEIK" to="SHEIK" method="OnPressed"]
+[connection signal="pressed" from="MARTH" to="MARTH" method="OnPressed"]
+[connection signal="pressed" from="ROY" to="ROY" method="OnPressed"]
+[connection signal="pressed" from="RandomButton" to="RandomButton" method="OnPressed"]
