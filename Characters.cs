@@ -74,20 +74,28 @@ public static class Characters
 		return UnlockedCharacters;
 	}
 	
-	public static void UnlockCharacters(ItemInfo[] Characters)
+	public static bool UnlockCharacters(ItemInfo[] Characters)
 	{
+		bool CharacterWasUnlocked = false;
 		foreach(ItemInfo item in Characters)
 		{
-			UnlockCharacter(item);
+			if( UnlockCharacter(item) && !CharacterWasUnlocked)
+			{
+				CharacterWasUnlocked = true;
+			}
 		}
+		
+		return CharacterWasUnlocked;
 	}
 	
-	public static void UnlockCharacter(ItemInfo Character)
+	public static bool UnlockCharacter(ItemInfo Character)
 	{
 		if( CharacterNames.IndexOf(Character.ItemDisplayName) > -1 )
 		{
 			UnlockedCharacters.Add(Character.ItemDisplayName);
+			return true;
 		}
+		return false;
 	}
 	
 	public static void RegisterWins(string CharacterName, int Wins)
@@ -116,16 +124,17 @@ public static class Characters
 	
 	public static bool CheckWinCondition()
 	{
-		if( CharacterHighestWinCount.Count == CharacterNames.Count )
+		if( CharacterHighestWinCount.Count >= (long)ArchipelagoHandler.GetSlotData()["total_character_wins_needed"] )
 		{
+			int EligibleCharacters = 0;
 			foreach(var (Character, Wins) in CharacterHighestWinCount)
 			{
-				if( Wins < 1 )
+				if( Wins >= (long)ArchipelagoHandler.GetSlotData()["required_wins_per_character"] )
 				{
-					return false;
+					EligibleCharacters++;
 				}
-				return true;
 			}
+			return EligibleCharacters >= (long)ArchipelagoHandler.GetSlotData()["total_character_wins_needed"];
 		}
 		return false;
 	}

@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=3 uid="uid://d2aepi78fek6f"]
+[gd_scene load_steps=94 format=3 uid="uid://d2aepi78fek6f"]
 
 [ext_resource type="Theme" uid="uid://bgm77cbt8fsxx" path="res://button-theme.tres" id="1_b45wl"]
 [ext_resource type="Script" path="res://Game.cs" id="1_mxhx8"]
@@ -34,6 +34,9 @@
 [ext_resource type="Script" path="res://MARTH.cs" id="30_vq435"]
 [ext_resource type="Script" path="res://ROY.cs" id="31_ecmq8"]
 [ext_resource type="FontFile" uid="uid://c1jpejhs21ypp" path="res://fonts/5a2ee6a29f0d16380e5575184f65a280.otf" id="34_67bbs"]
+[ext_resource type="Script" path="res://MessageHolder.cs" id="34_cdhvp"]
+[ext_resource type="Texture2D" uid="uid://7tq87xpiho62" path="res://art/angle-top-icon.png" id="36_o8gbw"]
+[ext_resource type="Texture2D" uid="uid://b246epmvvims6" path="res://art/angle-bottom-icon.png" id="37_c0viw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q5gwr"]
 atlas = ExtResource("2_r6sv7")
@@ -216,6 +219,20 @@ load_path = "res://.godot/imported/sprites.png-d131a8090ea32df3cff3aea1a1842224.
 [sub_resource type="AtlasTexture" id="AtlasTexture_khw3x"]
 atlas = SubResource("CompressedTexture2D_2c3pr")
 region = Rect2(391, 172, 64, 56)
+
+[sub_resource type="InputEventKey" id="InputEventKey_f7fmb"]
+device = -1
+keycode = 4194320
+
+[sub_resource type="Shortcut" id="Shortcut_ahqk7"]
+events = [SubResource("InputEventKey_f7fmb")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_c87od"]
+device = -1
+keycode = 4194322
+
+[sub_resource type="Shortcut" id="Shortcut_lei5q"]
+events = [SubResource("InputEventKey_c87od")]
 
 [node name="Game" type="CanvasLayer" groups=["GameStartHandler"]]
 script = ExtResource("1_mxhx8")
@@ -855,6 +872,14 @@ texture_normal = SubResource("AtlasTexture_khw3x")
 stretch_mode = 0
 script = ExtResource("5_miwjy")
 
+[node name="Label" type="Label" parent="RandomButton"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 139.0
+offset_right = 102.0
+offset_bottom = 162.0
+text = "[Space]"
+
 [node name="RandomCharacterSelection" type="Label" parent="."]
 offset_left = 299.0
 offset_top = 657.0
@@ -869,6 +894,7 @@ offset_right = 1773.0
 offset_bottom = 999.0
 texture = ExtResource("5_e2oum")
 expand_mode = 1
+script = ExtResource("34_cdhvp")
 
 [node name="Message Label" type="Label" parent="Message Holder"]
 layout_mode = 1
@@ -886,14 +912,44 @@ theme_override_font_sizes/font_size = 28
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="TextEdit" type="TextEdit" parent="Message Holder"]
+[node name="Scroll Label" type="Label" parent="Message Holder"]
 layout_mode = 0
 offset_left = 67.0
 offset_top = 368.0
-offset_right = 520.0
+offset_right = 363.0
 offset_bottom = 415.0
 theme_override_fonts/font = ExtResource("34_67bbs")
-wrap_mode = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Prev Message" type="TextureButton" parent="Message Holder"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.068
+anchor_bottom = 0.091
+offset_left = 380.0
+offset_top = 366.0
+offset_right = 390.22
+offset_bottom = 378.142
+shortcut = SubResource("Shortcut_ahqk7")
+texture_normal = ExtResource("36_o8gbw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Next Message" type="TextureButton" parent="Message Holder"]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 366.0
+offset_right = 510.0
+offset_bottom = 418.0
+scale = Vector2(1, 0.988772)
+shortcut = SubResource("Shortcut_lei5q")
+texture_normal = ExtResource("37_c0viw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sound Effects" type="AudioStreamPlayer2D" parent="Message Holder"]
+position = Vector2(-1188, -561)
 
 [connection signal="pressed" from="DRMARIO" to="DRMARIO" method="OnPressed"]
 [connection signal="pressed" from="MARIO" to="MARIO" method="OnPressed"]
@@ -924,3 +980,6 @@ wrap_mode = 1
 [connection signal="pressed" from="MARTH" to="MARTH" method="OnPressed"]
 [connection signal="pressed" from="ROY" to="ROY" method="OnPressed"]
 [connection signal="pressed" from="RandomButton" to="RandomButton" method="OnPressed"]
+[connection signal="IncomingText" from="Message Holder" to="Message Holder" method="Write"]
+[connection signal="pressed" from="Message Holder/Prev Message" to="Message Holder" method="PrevMessage"]
+[connection signal="pressed" from="Message Holder/Next Message" to="Message Holder" method="NextMessage"]

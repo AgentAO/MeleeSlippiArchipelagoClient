@@ -2,16 +2,13 @@ using Godot;
 using System;
 using System.Linq;
 using Archipelago.MultiClient.Net.Models;
+using Archipelago.MultiClient.Net.Enums;
 
 public partial class Game : CanvasLayer
-{
-	public Label MessageHolder;
-	public bool VictoryAchieved = false;
-	
+{	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		MessageHolder = GetNode<Label>("Message Holder/Message Label");
 	}
 	
 	public void OnGameStart()
@@ -26,10 +23,8 @@ public partial class Game : CanvasLayer
 			Locations.RegisterCharacterWinCounts(Location);
 		}
 		
-		if( Characters.CheckWinCondition() )
-		{
-			VictoryAchieved = true;
-		}
+		string WinsNeeded = string.Join(",",ArchipelagoHandler.GetSlotData()["required_wins_per_character"]);
+		GD.Print( $"required_wins_per_character {WinsNeeded}");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -38,26 +33,6 @@ public partial class Game : CanvasLayer
 		if( !ArchipelagoHandler.IsReady() )
 		{
 			return;
-		}
-		
-		if( !VictoryAchieved && Characters.CheckWinCondition() )
-		{
-			VictoryAchieved = true;
-		}
-		
-		if( VictoryAchieved )
-		{
-			MessageHolder.Text = "Victory achieved, congratuations!";
-		}
-		
-		if( !VictoryAchieved && ArchipelagoHandler.GetSession().Items.Any() )
-		{
-			ItemInfo NewItem = ArchipelagoHandler.GetSession().Items.DequeueItem();
-			
-			Characters.UnlockCharacter(NewItem);
-			string ItemName = NewItem.ItemDisplayName;
-			string ItemFrom = NewItem.Player.Alias;
-			MessageHolder.Text = $"Recieved {ItemName} from {ItemFrom}";
 		}
 	}
 }

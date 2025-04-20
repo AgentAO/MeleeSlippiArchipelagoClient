@@ -1,16 +1,23 @@
 using System;
+using System.Collections.Generic;
 using Archipelago.MultiClient.Net;
 using Archipelago.MultiClient.Net.Enums;
 using Archipelago.MultiClient.Net.Helpers;
 
 public static class ArchipelagoHandler
 {
-	private static ArchipelagoSession Session {get;set;}
 	public static string GameName {get;} = "Melee Slippi";
+	private static ArchipelagoSession Session {get;set;}
+	private static Dictionary<string, object> SlotData {get;set;}
 	
 	public static ArchipelagoSession GetSession()
 	{
 		return Session;
+	}
+	
+	public static Dictionary<string, object> GetSlotData()
+	{
+		return SlotData;
 	}
 	
 	public static void CreateSession(string Host = "localhost", int Port = 38281)
@@ -32,7 +39,8 @@ public static class ArchipelagoHandler
 			null, // version
 			null, // tags
 			null, // UUID
-			Password // Password that was set when the room was created
+			Password, // Password that was set when the room was created,
+			true // request slot data
 		);
 		
 		if( !result.Successful )
@@ -40,6 +48,8 @@ public static class ArchipelagoHandler
 			LoginFailure failure = (LoginFailure)result;
 			return failure;
 		}
+		
+		SlotData = ((LoginSuccessful)result).SlotData;
 		
 		return result;
 	}
