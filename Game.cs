@@ -23,7 +23,7 @@ public partial class Game : CanvasLayer
 			Locations.RegisterCharacterWinCounts(Location);
 		}
 		
-		string WinsNeeded = string.Join(",",ArchipelagoHandler.GetSlotData()["required_wins_per_character"]);
+		string WinsNeeded = string.Join(",",(int[])ArchipelagoHandler.GetSlotData()["wins_needed"]);
 		GD.Print( $"required_wins_per_character {WinsNeeded}");
 	}
 

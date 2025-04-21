@@ -38,6 +38,11 @@ public partial class MessageHolder : TextureRect
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		if( !ArchipelagoHandler.IsReady() )
+		{
+			return;
+		}
+		
 		if( AllMessages.Count > 0 )
 		{
 			MessageLabel.Text = AllMessages[CurMessage];
@@ -68,7 +73,7 @@ public partial class MessageHolder : TextureRect
 				}
 				string ItemName = NewItem.ItemDisplayName;
 				string ItemFrom = NewItem.Player.Alias;
-				Write($"Recieved {ItemName} from {ItemFrom}");
+				Write($"Recieved {ItemName} from {ItemFrom}!");
 			}
 			
 			if( !SoundEffects.IsPlaying() )

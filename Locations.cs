@@ -35,7 +35,7 @@ public partial class Locations
 			.ContinueWith(UnlockInfo => {
 				foreach((long id, ScoutedItemInfo info) in UnlockInfo.Result)
 				{
-					UnhandledSentLocations.Enqueue($"Sent {info.ItemDisplayName} to {info.Player}");
+					UnhandledSentLocations.Enqueue($"Sent {info.ItemDisplayName} to {info.Player}!");
 				}
 				DoingLookup = false;
 			});		

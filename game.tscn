@@ -253,14 +253,16 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Counter" type="Label" parent="DRMARIO"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MARIO" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 208.0
@@ -277,14 +279,16 @@ CharacterName = "Mario"
 
 [node name="Counter" type="Label" parent="MARIO"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LUIGI" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 383.0
@@ -301,14 +305,16 @@ CharacterName = "Luigi"
 
 [node name="Counter" type="Label" parent="LUIGI"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="BOWSER" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 557.0
@@ -325,14 +331,16 @@ CharacterName = "Bowser"
 
 [node name="Counter" type="Label" parent="BOWSER"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="PEACH" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 731.0
@@ -349,14 +357,16 @@ CharacterName = "Peach"
 
 [node name="Counter" type="Label" parent="PEACH"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="YOSHI" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 907.0
@@ -373,14 +383,16 @@ CharacterName = "Yoshi"
 
 [node name="Counter" type="Label" parent="YOSHI"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="YLINK" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 1413.0
@@ -397,14 +409,16 @@ CharacterName = "Young Link"
 
 [node name="Counter" type="Label" parent="YLINK"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="DK" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 1079.0
@@ -421,14 +435,16 @@ CharacterName = "Donkey Kong"
 
 [node name="Counter" type="Label" parent="DK"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CF" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 1247.0
@@ -445,14 +461,16 @@ CharacterName = "Captain Falcon"
 
 [node name="Counter" type="Label" parent="CF"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="GANONDORF" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 1413.0
@@ -469,14 +487,16 @@ CharacterName = "Ganondorf"
 
 [node name="Counter" type="Label" parent="GANONDORF"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="FALCO" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 36.0
@@ -493,14 +513,16 @@ CharacterName = "Falco"
 
 [node name="Counter" type="Label" parent="FALCO"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="FOX" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 208.0
@@ -517,14 +539,16 @@ CharacterName = "Fox"
 
 [node name="Counter" type="Label" parent="FOX"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="NESS" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 383.0
@@ -541,14 +565,16 @@ CharacterName = "Ness"
 
 [node name="Counter" type="Label" parent="NESS"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="IC" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 557.0
@@ -565,14 +591,16 @@ CharacterName = "Ice Climbers"
 
 [node name="Counter" type="Label" parent="IC"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="KIRBY" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 731.0
@@ -589,14 +617,16 @@ CharacterName = "Kirby"
 
 [node name="Counter" type="Label" parent="KIRBY"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SAMUS" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 907.0
@@ -613,14 +643,16 @@ CharacterName = "Samus"
 
 [node name="Counter" type="Label" parent="SAMUS"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ZELDA" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 1079.0
@@ -637,14 +669,16 @@ CharacterName = "Zelda"
 
 [node name="Counter" type="Label" parent="ZELDA"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LINK" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 1247.0
@@ -661,14 +695,16 @@ CharacterName = "Link"
 
 [node name="Counter" type="Label" parent="LINK"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="PICHU" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 118.0
@@ -685,14 +721,16 @@ CharacterName = "Pichu"
 
 [node name="Counter" type="Label" parent="PICHU"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="PIKACHU" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 290.0
@@ -709,14 +747,16 @@ CharacterName = "Pikachu"
 
 [node name="Counter" type="Label" parent="PIKACHU"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="JIGGLYPUFF" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 462.0
@@ -733,14 +773,16 @@ CharacterName = "Jigglypuff"
 
 [node name="Counter" type="Label" parent="JIGGLYPUFF"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MEWTWO" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 642.0
@@ -757,14 +799,16 @@ CharacterName = "Mewtwo"
 
 [node name="Counter" type="Label" parent="MEWTWO"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="GW" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 825.0
@@ -781,14 +825,16 @@ CharacterName = "Mr. Game & Watch"
 
 [node name="Counter" type="Label" parent="GW"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SHEIK" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 995.0
@@ -805,14 +851,16 @@ CharacterName = "Sheik"
 
 [node name="Counter" type="Label" parent="SHEIK"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MARTH" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 1161.0
@@ -829,14 +877,16 @@ CharacterName = "Marth"
 
 [node name="Counter" type="Label" parent="MARTH"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ROY" type="TextureButton" parent="." groups=["Character Portraits", "GameStartHandler"]]
 offset_left = 1329.0
@@ -853,14 +903,16 @@ CharacterName = "Roy"
 
 [node name="Counter" type="Label" parent="ROY"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 2.0
-offset_right = 143.0
-offset_bottom = 25.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 147.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="RandomButton" type="TextureButton" parent="."]
 offset_left = 118.0
@@ -963,16 +1015,16 @@ position = Vector2(-1188, -561)
 [connection signal="pressed" from="GANONDORF" to="GANONDORF" method="OnPressed"]
 [connection signal="pressed" from="FALCO" to="FALCO" method="OnPressed"]
 [connection signal="pressed" from="FOX" to="FOX" method="OnPressed"]
-[connection signal="pressed" from="NESS" to="NESS" method="_on_pressed"]
 [connection signal="pressed" from="NESS" to="NESS" method="OnPressed"]
+[connection signal="pressed" from="NESS" to="NESS" method="_on_pressed"]
 [connection signal="pressed" from="IC" to="IC" method="OnPressed"]
 [connection signal="pressed" from="KIRBY" to="KIRBY" method="OnPressed"]
 [connection signal="pressed" from="SAMUS" to="SAMUS" method="OnPressed"]
 [connection signal="pressed" from="ZELDA" to="ZELDA" method="OnPressed"]
 [connection signal="pressed" from="LINK" to="LINK" method="OnPressed"]
 [connection signal="pressed" from="PICHU" to="PICHU" method="OnPressed"]
-[connection signal="pressed" from="PIKACHU" to="PIKACHU" method="_on_pressed"]
 [connection signal="pressed" from="PIKACHU" to="PIKACHU" method="OnPressed"]
+[connection signal="pressed" from="PIKACHU" to="PIKACHU" method="_on_pressed"]
 [connection signal="pressed" from="JIGGLYPUFF" to="JIGGLYPUFF" method="OnPressed"]
 [connection signal="pressed" from="MEWTWO" to="MEWTWO" method="OnPressed"]
 [connection signal="pressed" from="GW" to="GW" method="OnPressed"]
