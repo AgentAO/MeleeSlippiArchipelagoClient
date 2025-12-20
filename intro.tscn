@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://lirby80l2xvy"]
+[gd_scene load_steps=10 format=3 uid="uid://lirby80l2xvy"]
 
 [ext_resource type="Texture2D" uid="uid://b0pkux50lo6m2" path="res://art/melee-logo.png" id="1_bdmdx"]
 [ext_resource type="Texture2D" uid="uid://qun2w64ks82b" path="res://art/archi-text-2.png" id="2_kei82"]
@@ -10,6 +10,9 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_e61rd"]
 font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_bp032"]
+font_size = 32
 
 [node name="Intro" type="CanvasLayer"]
 
@@ -50,7 +53,7 @@ offset_right = 1189.0
 offset_bottom = 441.0
 focus_next = NodePath("../Port Field")
 theme_override_font_sizes/font_size = 32
-placeholder_text = "localhost"
+placeholder_text = "archipelago.gg"
 script = ExtResource("3_0ix7d")
 
 [node name="Port Label" type="Label" parent="."]
@@ -136,6 +139,18 @@ offset_left = 1282.0
 offset_top = 382.0
 offset_right = 1841.0
 offset_bottom = 913.0
+
+[node name="Version Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_top = 0.196
+anchor_right = 0.517
+anchor_bottom = 0.332
+offset_left = 1692.0
+offset_top = 812.32
+offset_right = 905.36
+offset_bottom = 710.44
+text = "Version: 0.0.4"
+label_settings = SubResource("LabelSettings_bp032")
 
 [connection signal="gui_input" from="Host Field" to="Host Field" method="OnInput"]
 [connection signal="gui_input" from="Port Field" to="Port Field" method="OnInput"]

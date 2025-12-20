@@ -2,10 +2,13 @@ using System;
 using System.Collections.Generic;
 using Godot;
 using Archipelago.MultiClient.Net.Models;
+using System.Linq;
+using Archipelago.MultiClient.Net.Packets;
 
 public static class Characters
 {
 	public static Dictionary<string, int> CharacterHighestWinCount = new Dictionary<string, int> {};
+	public static Dictionary<string, List<int>> CharacterWinChecksUnlocked = new() { };
 	public static List<string> UnlockedCharacters = new List<string> {};
 	public static List<string> CharacterNames = new List<string> {
 		"Mario",
@@ -100,25 +103,36 @@ public static class Characters
 	
 	public static void RegisterWins(string CharacterName, int Wins)
 	{
-		if( !CharacterHighestWinCount.ContainsKey(CharacterName) )
+		if( !CharacterWinChecksUnlocked.ContainsKey(CharacterName) )
 		{
-			CharacterHighestWinCount[CharacterName] = Wins;
+			CharacterWinChecksUnlocked[CharacterName] = new List<int> {Wins};
 		}
-		else if( CharacterHighestWinCount[CharacterName] < Wins )
+		else
 		{
-			CharacterHighestWinCount[CharacterName] = Wins;
+			CharacterWinChecksUnlocked[CharacterName].Add(Wins);
 		}
 	}
 	
 	public static int GetCharacterHighestWins(string CharacterName)
 	{
-		if( !CharacterHighestWinCount.ContainsKey(CharacterName) )
+		if( !CharacterWinChecksUnlocked.ContainsKey(CharacterName) )
 		{
 			return 0;
 		}
 		else
 		{
-			return CharacterHighestWinCount[CharacterName];
+			int maxWins = CharacterWinChecksUnlocked[CharacterName].Max(t => t);
+			for(int check = 1; check <= maxWins; check++)
+			{
+				if( !CharacterWinChecksUnlocked[CharacterName].Contains(check) )
+				{
+					// If we haven't gotten a lower check yet - we mark up to the last highest check acquired.
+					// If we don't have check 1, this should be 0.
+					return check-1;
+				}
+			}
+
+			return maxWins;
 		}
 	}
 	

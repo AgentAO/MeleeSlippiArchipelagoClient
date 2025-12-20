@@ -3,9 +3,13 @@ using System;
 
 public partial class FormInput : TextEdit
 {
+	private Button SubmitButton {get;set;}
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		var IntroLayer = GetTree().GetCurrentScene().GetNode<CanvasLayer>("HUD/Intro");
+		SubmitButton = IntroLayer.GetNode<Button>("StartButton");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,6 +35,11 @@ public partial class FormInput : TextEdit
 				{
 					GetNode(FocusNext).CallDeferred(TextEdit.MethodName.GrabFocus);
 				}
+				GetViewport().SetInputAsHandled();
+			}
+			else if( eventKey.Pressed && eventKey.Keycode == Key.Enter && HasFocus() )
+			{
+				SubmitButton.EmitSignal("pressed");
 				GetViewport().SetInputAsHandled();
 			}
 		}

@@ -17,26 +17,36 @@ public partial class StartButton : Godot.Button
 	private void OnPressed()
 	{
 		var IntroLayer = GetTree().GetCurrentScene().GetNode<CanvasLayer>("HUD/Intro");
-		var GameLayer = GetTree().GetCurrentScene().GetNode<CanvasLayer>("HUD/Game");
 		var ErrorMessagesLabel = IntroLayer.GetNode<Label>("ErrorMessages");
 		var HostField = IntroLayer.GetNode<TextEdit>("Host Field");
 		var PortField = IntroLayer.GetNode<TextEdit>("Port Field");
 		var PlayerField = IntroLayer.GetNode<TextEdit>("Player Name Field");
 		var PasswordField = IntroLayer.GetNode<TextEdit>("Password Field");
 		
+		this.Text = "Connecting";
+		
 		try
 		{
-			ArchipelagoHandler.CreateSession(HostField.Text, Convert.ToInt32(PortField.Text));
+			ArchipelagoHandler.CreateSession(
+				!string.IsNullOrEmpty(HostField.Text) ? HostField.Text : "archipelago.gg", 
+				!string.IsNullOrEmpty(PortField.Text) ? Convert.ToInt32(PortField.Text) : 38281
+			);
 		}
 		catch(Exception e)
 		{
+			this.Text = "Connect";
 			ErrorMessagesLabel.Text = e.Message;
+			return;
 		}
 		
-		LoginResult result = ArchipelagoHandler.TryLogin(PlayerField.Text, PasswordField.Text);
+		LoginResult result = ArchipelagoHandler.TryLogin(
+			!string.IsNullOrEmpty(PlayerField.Text) ? PlayerField.Text : "Player1", 
+			PasswordField.Text
+		);
 		
 		if( ArchipelagoHandler.IsSuccessful(result) )
 		{
+			var GameLayer = GetTree().GetCurrentScene().GetNode<CanvasLayer>("HUD/Game");
 			//IntroLayer.RemoveChild();
 			//IntroLayer.QueueFree();
 			IntroLayer.Hide();
@@ -45,6 +55,7 @@ public partial class StartButton : Godot.Button
 		}
 		else
 		{
+			this.Text = "Connect";
 			ErrorMessagesLabel.Text = ArchipelagoHandler.GetErrorMessages(result);
 		}
 	}

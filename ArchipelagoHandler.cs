@@ -20,7 +20,7 @@ public static class ArchipelagoHandler
 		return SlotData;
 	}
 	
-	public static void CreateSession(string Host = "localhost", int Port = 38281)
+	public static void CreateSession(string Host = "archipelago.gg", int Port = 38281)
 	{
 		Session = ArchipelagoSessionFactory.CreateSession(Host, Port);
 	}
