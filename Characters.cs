@@ -138,12 +138,12 @@ public static class Characters
 	
 	public static bool CheckWinCondition()
 	{
-		if( CharacterHighestWinCount.Count >= (long)ArchipelagoHandler.GetSlotData()["total_character_wins_needed"] )
+		if( CharacterWinChecksUnlocked.Count >= (long)ArchipelagoHandler.GetSlotData()["total_character_wins_needed"] )
 		{
 			int EligibleCharacters = 0;
-			foreach(var (Character, Wins) in CharacterHighestWinCount)
+			foreach(var (Character, Wins) in CharacterWinChecksUnlocked)
 			{
-				if( Wins >= (long)ArchipelagoHandler.GetSlotData()["required_wins_per_character"] )
+				if( GetCharacterHighestWins(Character) >= (long)ArchipelagoHandler.GetSlotData()["required_wins_per_character"] )
 				{
 					EligibleCharacters++;
 				}

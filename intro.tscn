@@ -76,7 +76,7 @@ offset_bottom = 601.0
 focus_next = NodePath("../Player Name Field")
 focus_previous = NodePath("../Host Field")
 theme_override_font_sizes/font_size = 32
-placeholder_text = "38281"
+placeholder_text = "53909"
 script = ExtResource("4_h574u")
 
 [node name="Player Name Label" type="Label" parent="."]
@@ -149,7 +149,7 @@ offset_left = 1692.0
 offset_top = 812.32
 offset_right = 905.36
 offset_bottom = 710.44
-text = "Version: 0.0.4"
+text = "Version: 0.0.5"
 label_settings = SubResource("LabelSettings_bp032")
 
 [connection signal="gui_input" from="Host Field" to="Host Field" method="OnInput"]
