@@ -44,13 +44,13 @@ public partial class CharacterButton : TextureButton
 		
 		// Check our location loaded win counts in case we unlocked more somehow (like someone else won)'
 		// We still need the lower wins
-		if( 
-			Characters.GetCharacterHighestWins(CharacterName) != WinCount
-		)
-		{
-			WinCount = Characters.GetCharacterHighestWins(CharacterName);
-			ArchipelagoHandler.GetSession().DataStorage[$"{CharacterName} Wins"] = Characters.GetCharacterHighestWins(CharacterName);
-		}
+		// if( 
+		// 	Characters.GetCharacterHighestWins(CharacterName) != WinCount
+		// )
+		// {
+		// 	WinCount = Characters.GetCharacterHighestWins(CharacterName);
+		// 	ArchipelagoHandler.GetSession().DataStorage[$"{CharacterName} Wins"] = Characters.GetCharacterHighestWins(CharacterName);
+		// }
 		
 		if( WinCount > 0 )
 		{

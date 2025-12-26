@@ -115,25 +115,35 @@ public static class Characters
 	
 	public static int GetCharacterHighestWins(string CharacterName)
 	{
-		if( !CharacterWinChecksUnlocked.ContainsKey(CharacterName) )
+		// Check our session data loaded win counts
+		ArchipelagoHandler.GetSession().DataStorage[$"{CharacterName} Wins"].Initialize(0);
+		if( ArchipelagoHandler.GetSession().DataStorage[$"{CharacterName} Wins"] > 0 )
 		{
-			return 0;
+			return ArchipelagoHandler.GetSession().DataStorage[$"{CharacterName} Wins"];
 		}
-		else
-		{
-			int maxWins = CharacterWinChecksUnlocked[CharacterName].Max(t => t);
-			for(int check = 1; check <= maxWins; check++)
-			{
-				if( !CharacterWinChecksUnlocked[CharacterName].Contains(check) )
-				{
-					// If we haven't gotten a lower check yet - we mark up to the last highest check acquired.
-					// If we don't have check 1, this should be 0.
-					return check-1;
-				}
-			}
 
-			return maxWins;
-		}
+		return 0;
+
+		// Old code
+		// if( !CharacterWinChecksUnlocked.ContainsKey(CharacterName) )
+		// {
+		// 	return 0;
+		// }
+		// else
+		// {
+		// 	int maxWins = CharacterWinChecksUnlocked[CharacterName].Max(t => t);
+		// 	for(int check = 1; check <= maxWins; check++)
+		// 	{
+		// 		if( !CharacterWinChecksUnlocked[CharacterName].Contains(check) )
+		// 		{
+		// 			// If we haven't gotten a lower check yet - we mark up to the last highest check acquired.
+		// 			// If we don't have check 1, this should be 0.
+		// 			return check-1;
+		// 		}
+		// 	}
+
+		// 	return maxWins;
+		// }
 	}
 	
 	public static bool CheckWinCondition()
