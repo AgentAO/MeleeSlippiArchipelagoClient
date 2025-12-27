@@ -36,10 +36,9 @@ public partial class CharacterButton : TextureButton
 		}
 		
 		// Check our session data loaded win counts
-		ArchipelagoHandler.GetSession().DataStorage[$"{CharacterName} Wins"].Initialize(0);
-		if( ArchipelagoHandler.GetSession().DataStorage[$"{CharacterName} Wins"] > 0 )
+		if( ArchipelagoHandler.GetDataStorageLocal($"{CharacterName} Wins") > 0 )
 		{
-			WinCount = ArchipelagoHandler.GetSession().DataStorage[$"{CharacterName} Wins"];
+			WinCount = ArchipelagoHandler.GetDataStorageLocal($"{CharacterName} Wins");
 		}
 		
 		// Check our location loaded win counts in case we unlocked more somehow (like someone else won)'
@@ -49,7 +48,7 @@ public partial class CharacterButton : TextureButton
 		// )
 		// {
 		// 	WinCount = Characters.GetCharacterHighestWins(CharacterName);
-		// 	ArchipelagoHandler.GetSession().DataStorage[$"{CharacterName} Wins"] = Characters.GetCharacterHighestWins(CharacterName);
+		// 	ArchipelagoHandler.SetDataStorageLocal($"{CharacterName} Wins", Characters.GetCharacterHighestWins(CharacterName));
 		// }
 		
 		if( WinCount > 0 )
@@ -90,8 +89,7 @@ public partial class CharacterButton : TextureButton
 		WinCount++;
 		Counter.Text = WinCount.ToString();
 		Locations.SendWinLocation(CharacterName, WinCount);
-		ArchipelagoHandler.GetSession().DataStorage[$"{CharacterName} Wins"].Initialize(0);
-		ArchipelagoHandler.GetSession().DataStorage[$"{CharacterName} Wins"] = WinCount;
+		ArchipelagoHandler.SetDataStorageLocal($"{CharacterName} Wins", WinCount);
 		if( Characters.CheckWinCondition() )
 		{
 			ArchipelagoHandler.GetSession().SetGoalAchieved();

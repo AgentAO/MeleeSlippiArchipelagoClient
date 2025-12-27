@@ -53,6 +53,18 @@ public static class ArchipelagoHandler
 		
 		return result;
 	}
+
+	public static Archipelago.MultiClient.Net.Models.DataStorageElement GetDataStorageLocal(string key)
+	{
+		Session.DataStorage[Scope.Slot, key].Initialize(0);
+		return Session.DataStorage[Scope.Slot, key];
+	}
+
+	public static Archipelago.MultiClient.Net.Models.DataStorageElement SetDataStorageLocal(string key, Archipelago.MultiClient.Net.Models.DataStorageElement input)
+	{
+		Session.DataStorage[Scope.Slot, key].Initialize(0);
+		return Session.DataStorage[Scope.Slot, key] = input;
+	}
 	
 	public static bool IsSuccessful(LoginResult result)
 	{
