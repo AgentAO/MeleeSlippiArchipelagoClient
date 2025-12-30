@@ -149,7 +149,7 @@ offset_left = 1692.0
 offset_top = 812.32
 offset_right = 905.36
 offset_bottom = 710.44
-text = "Version: 0.0.7"
+text = "Version: 0.0.8"
 label_settings = SubResource("LabelSettings_bp032")
 
 [connection signal="gui_input" from="Host Field" to="Host Field" method="OnInput"]
