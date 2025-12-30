@@ -116,10 +116,9 @@ public static class Characters
 	public static int GetCharacterHighestWins(string CharacterName)
 	{
 		// Check our session data loaded win counts
-		ArchipelagoHandler.GetSession().DataStorage[$"{CharacterName} Wins"].Initialize(0);
-		if( ArchipelagoHandler.GetSession().DataStorage[$"{CharacterName} Wins"] > 0 )
+		if( ArchipelagoHandler.GetDataStorageLocal($"{CharacterName} Wins") > 0 )
 		{
-			return ArchipelagoHandler.GetSession().DataStorage[$"{CharacterName} Wins"];
+			return ArchipelagoHandler.GetDataStorageLocal($"{CharacterName} Wins");
 		}
 
 		return 0;
